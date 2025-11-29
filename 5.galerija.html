@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <title>Gallery</title>
+    <link rel="stylesheet" href="style.css"> 
+    <link href="CSS/bootstrap.min.css" rel="stylesheet" >  
+    <style> 
+        .gallery { 
+            column-count: 3;  
+            column-gap: 16px; 
+            width: min(1200px, 100%); 
+            margin: 0 auto; 
+            padding: 16px;
+
+        }  
+
+        @media (max-width:1100px) { 
+            .gallery{ column-count: 3;}
+        }   
+
+        @media (max-width:760px) { 
+            .gallery{column-count: 2;}
+        } 
+
+        @media (max-width:420px) { 
+            .gallery{ column-count: 1;}
+        } 
+
+        .gallery figure { 
+            margin: 0 0 var(--gap) 0; 
+            break-inside: avoid; 
+            -webkit-column-break-inside: avoid;
+        } 
+        .gallery img { 
+            display: flex;  
+            width: 100%; 
+            height: auto; 
+            vertical-align: middle;  
+            object-fit: cover;
+
+
+        } 
+
+        .gallery figcaption { 
+            padding: 8px 10px; 
+
+        } 
+
+        .pagination { 
+            display: flex; 
+            gap: 6px; 
+            margin-left: 45%; 
+            font-family: Arial, Helvetica, sans-serif; 
+        } 
+        .pagination a { 
+            padding: 8px 14px; 
+            border: 1px solid #ccc; 
+            color: #333; 
+            text-decoration: none; 
+            border-radius: 4px; 
+            font-size: 16px;
+        } 
+        .pagination a.active { 
+            background: #e63946; 
+            color: #fff; 
+            border-color: #e63946;
+        } 
+        .pagination a:hover { 
+            background: #ddd;
+        } 
+
+
+        
+        
+
+
+    </style>
+</head>
+<body> 
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light py-3"> 
+    <div class="container"> 
+        <a class="navbar-brand" href="1.HomePage.html"> My Website</a> 
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu"> 
+            <span> <img src="menu.png" alt="menu-icon"></span>
+        </button> 
+
+        <div class="collapse navbar-collapse" id="navMenu">
+    
+    <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="1.HomePage.html">Hlavní stranka</a></li>
+          <li class="nav-item"><a class="nav-link" href="2.galerija.html">Moje práce</a></li>
+          
+          
+          
+          <li class="nav-item"><a class="nav-link" href="https://www.instagram.com/jarda_karbas/">Instagram</a></li> 
+          <li class="nav-item"><a class="nav-link" href="https://www.facebook.com/jaroslav.karbas">Facebook</a></li>  
+    </ul>
+    </div> 
+    </div>
+</nav> 
+
+<div class="gallery"> 
+
+    <img src="72.jpg" alt="Fotka-72"> 
+    <img src="75.jpg" alt="Fotka-75"> 
+    <img src="76.jpg" alt="Fotka-76"> 
+    <img src="77.jpg" alt="Fotka-77"> 
+    <img src="78.jpg" alt="Fotka-78"> 
+    <img src="79.jpg" alt="Fotka-79"> 
+    <img src="80.jpg" alt="Fotka-80"> 
+    <img src="81.jpg" alt="Fotka-81"> 
+    <img src="82.jpg" alt="Fotka-82"> 
+    <img src="83.jpg" alt="Fotka-83">
+    <img src="84.jpg" alt="Fotka-84"> 
+    <img src="85.jpg" alt="Fotka-85"> 
+    <img src="86.jpg" alt="Fotka-86"> 
+    <img src="87.jpg" alt="Fotka-87">  
+    <img src="89.jpg" alt="Fotka-89"> 
+</div> 
+<div class="pagination"> 
+    <a class="active" href="1.galerija.html">1</a> 
+    <a class="active" href="2.galerija.html">2</a> 
+    <a class="active" href="3.galerija.html">3</a> 
+    <a class="active" href="4.galerija.html">4</a> 
+    <a class="active" href="5.galerija.html">5</a> 
+    <a class="active" href="6.galerija.html">6</a> 
+    <a class="active" href="7.galerija.html">7</a> 
+    <a class="active" href="8.galerija.html">8</a>
+
+
+
+</div>
+
+
+
+
+
+  <script src="JS/jquery-3.7.1.slim.min.js"></script> 
+  <script src="JS/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
