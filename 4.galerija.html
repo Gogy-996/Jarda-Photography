@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <title>Gallery</title>
+    <link href="CSS/bootstrap.min.css" rel="stylesheet" >  
+    <style> 
+        .gallery { 
+           columns:  2;  
+            column-gap: 16px; 
+            width: min(1200px, 100%); 
+            margin: 0 auto; 
+            padding: 16px;
+
+        }  
+
+        @media (max-width:1100px) { 
+            .gallery{ column-count: 3;}
+        }   
+
+        @media (max-width:760px) { 
+            .gallery{column-count: 2;}
+        } 
+
+        @media (max-width:420px) { 
+            .gallery{ column-count: 1;}
+        } 
+
+        .gallery figure { 
+            margin: 0 0 var(--gap) 0; 
+            break-inside: avoid; 
+            -webkit-column-break-inside: avoid;
+        } 
+        .gallery img { 
+            display: flex;  
+            width: 100%; 
+            height: auto; 
+            vertical-align: middle;  
+            object-fit: cover;
+
+
+        } 
+
+        .gallery figcaption { 
+            padding: 8px 10px; 
+
+        } 
+
+        .pagination { 
+            display: flex; 
+            justify-content: center; 
+            gap: 12px; 
+            margin: 30px 0;
+        }
+
+       .page-num { 
+        padding: 10px 16px; 
+        background: #333; 
+        color: white; 
+        border-radius: 6px; 
+        text-decoration: none; 
+        transition: 0.3s; 
+        font-size: 18px;  
+       
+
+       } 
+       .page-num:hover { 
+        background: #555;
+       } 
+       .page { 
+        display: none;
+       } 
+       :target { 
+        display: block;
+       }  
+       #page1 { 
+        display: block;
+       }
+
+       #page1 :target ~ .pagination #btn1, 
+       #page2 :target ~ .pagination #btn2, 
+       #page3 :target ~ .pagination #btn3, 
+       #page4 :target ~ .pagination #btn4, 
+       #page5 :target ~ .pagination #btn5, 
+       #page6 :target ~ .pagination #btn6, 
+       #page7 :target ~ .pagination #btn7, 
+       #page8 :target ~ .pagination #btn8 { 
+        background: #e600; 
+        font-weight: bold; 
+        transform: scale(1.15);
+       } 
+
+       .pagination a.active { 
+        background: red; 
+        color: white;  
+        padding: 10px 16px;  
+       }
+
+
+        
+        
+
+
+    </style>
+</head>
+<body> 
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light py-3"> 
+    <div class="container"> 
+        <a class="navbar-brand" href="index.html"> JK Photography</a> 
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu"> 
+            <span> <img src="menu.png" alt="menu-icon"></span>
+        </button> 
+
+        <div class="collapse navbar-collapse" id="navMenu">
+    
+    <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Hlavní stranka</a></li>
+          <li class="nav-item"><a class="nav-link" href="2.galerija.html">Moje práce</a></li>
+          
+          
+          
+          <li class="nav-item"><a class="nav-link" href="https://www.instagram.com/jarda_karbas/">Instagram</a></li> 
+          <li class="nav-item"><a class="nav-link" href="https://www.facebook.com/jaroslav.karbas">Facebook</a></li>  
+    </ul>
+    </div> 
+    </div>
+</nav> 
+
+<div class="gallery"> 
+
+    <img src="54.jpg" alt="Fotka-54"> 
+    <img src="55.jpg" alt="Fotka-55"> 
+    <img src="56.jpg" alt="Fotka-56"> 
+    <img src="57.jpg" alt="Fotka-57"> 
+    <img src="58.jpg" alt="Fotka-58"> 
+    <img src="59.jpg" alt="Fotka-59"> 
+    <img src="60.jpg" alt="Fotka-60"> 
+    <img src="61.jpg" alt="Fotka-61"> 
+    <img src="62.jpg" alt="Fotka-62"> 
+    <img src="63.jpg" alt="Fotka-63"> 
+    <img src="64.jpg" alt="Fotka-64"> 
+    <img src="65.jpg" alt="Fotka-65">
+    <img src="66.jpg" alt="Fotka-66"> 
+    <img src="67.jpg" alt="Fotka-67"> 
+    <img src="68.jpg" alt="Fotka-68"> 
+    <img src="69.jpg" alt="Fotka-69"> 
+    <img src="70.jpg" alt="Fotka-70"> 
+    <img src="71.jpg" alt="Fotka-71"> 
+</div> 
+<div class="pagination"> 
+    <a class="page-num" href="1.galerija.html">1</a> 
+    <a class="page-num" href="2.galerija.html">2</a> 
+    <a class="page-num" href="3.galerija.html">3</a> 
+    <a class="active" href="4.galerija.html">4</a> 
+    <a class="page-num" href="5.galerija.html">5</a> 
+    <a class="page-num" href="6.galerija.html">6</a> 
+    <a class="page-num" href="7.galerija.html">7</a> 
+    <a class="page-num" href="8.galerija.html">8</a>
+
+
+</div> 
+
+ 
+
+
+
+
+
+
+
+
+
+
+  <script src="JS/jquery-3.7.1.slim.min.js"></script> 
+  <script src="JS/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
